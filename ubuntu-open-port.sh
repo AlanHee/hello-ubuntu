@@ -7,6 +7,7 @@ fi
 
 if sudo ufw status | grep -q "$1"; then
 	echo "$1 port has open"
+	netstat -nat | grep $1
 else
 	sudo ufw allow $1/tcp
 	echo "success open port $1"
