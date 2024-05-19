@@ -31,8 +31,8 @@ services:
       ND_SESSIONTIMEOUT: 24h
       ND_BASEURL: ""
     volumes:
-      - /root/music/db
-      - /root/music/asset
+      - "/root/music/db:/data"
+      - "/root/music/asset:/music:ro"
 EOF
 
 mkdir -p ~/$1/{db,asset}
