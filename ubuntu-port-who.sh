@@ -1,3 +1,3 @@
 #!/bin/bash
 
-lsof -P | grep '$1'
+lsof -P | grep $1
